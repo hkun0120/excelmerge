@@ -8,11 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * k
  * Created by storm on 2017/3/10.
  */
 public class MergeTester {
     public static void main(String[] args) {
-        System.out.printf("input your directory where xls files located:");
+        System.out.printf("input your directory where xls files located: ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String path = null;
         try {
@@ -23,15 +24,13 @@ public class MergeTester {
         mergeFiles(path);
     }
 
-    public static void mergeFiles(String path){
+    private static void mergeFiles(String path) {
         File file = new File(path);
         String destFile = "";
 
         List<String> listNames = new ArrayList<String>();
         if (file.isDirectory()){
-            if(path.charAt(path.length()-1)=='/'){
-
-            }else {
+            if (path.charAt(path.length() - 1) != '/') {
                 path = path + "/";
             }
             destFile = path+"dest.xls";
