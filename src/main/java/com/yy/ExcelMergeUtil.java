@@ -149,7 +149,7 @@ public class ExcelMergeUtil {
     /**
      * 获取Excel文档的记录集
      */
-    static List<Record> getRecords(InputStream input) {
+    public static List<Record> getRecords(InputStream input) {
         try{
             POIFSFileSystem poifs = new POIFSFileSystem(input);
             InputStream stream = poifs.getRoot().createDocumentInputStream("Workbook");
